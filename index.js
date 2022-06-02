@@ -10,31 +10,13 @@ const dates = [
 // TODO: Buatlah fungsi createDate
 const createDate = (data,pos) => {
   if( typeof pos !== 'undefined' ) {
-  
-    if (pos == 0) {
-      let epoch = new Date(data[0]).getTime() / 1000
-      return epoch.toString();
+    for (let i = 0; i < data.length; i++) {
+        if (pos === i) {
+          let epoch = new Date(data[i]).getTime() / 1000
+          return epoch.toString();
+        }
     }
-    if (pos == 1) {
-      let epoch = new Date(data[1]).getTime() / 1000
-      return epoch.toString();
-    }
-  
-    if (pos == 2) {
-      let epoch = new Date(data[2]).getTime() / 1000
-      return epoch.toString();
-    }
-  
-    if (pos == 3) {
-      let epoch = new Date(data[3]).getTime() / 1000
-      return epoch.toString();
-    }
-  
-    if (pos == 4) {
-      let epoch = new Date(data[4]).getTime() / 1000
-      return epoch.toString();
-    }
-} else {
+  } else {
   let temp = "";
   let arr = [];
    for (let i = 0; i < data.length; i++) {
